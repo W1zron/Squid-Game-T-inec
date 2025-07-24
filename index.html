@@ -1,11 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Squid Game Třinec</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #ff69b4; /* růžové pozadí */
+      color: #40e0d0;            /* tyrkysový text */
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #40e0d0;
+    }
+
+    #countdown {
+      font-size: 40px;
+      margin-top: 20px;
+      color: #40e0d0;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+      font-size: 48px;
+    }
+
+    #event-info {
+      margin-top: 50px;
+      font-size: 22px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      color: #40e0d0;
+    }
+
+    #event-info h2 {
+      color: #40e0d0;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <h1>Squid Game Třinec</h1>
@@ -14,10 +53,34 @@
 
   <div id="event-info">
     <h2>📍 První hra</h2>
-    <p>🗓️ Datum: <strong>24. 7. 2025</strong></p>
-    <p>📌 Místo: <strong>Školní hřiště ZŠ 5. Třinec</strong></p>
+    <p>🗓️ Datum: <strong>25. 7. 2025</strong></p>
+    <p>📌 Místo: <strong>Školní hřiště ZŠ 5. května, Třinec</strong></p>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const eventDate = new Date("2025-07-25T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "Akce už začala!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      if (days === 1) {
+        countdownElement.innerHTML = `Zbývá <span class="highlight">1</span> den`;
+      } else {
+        countdownElement.innerHTML = `${days} dní`;
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000 * 60 * 60); // aktualizace každou hodinu
+  </script>
 </body>
-</html>
+</html> 
