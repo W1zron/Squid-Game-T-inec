@@ -1,113 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>Squid Game Třinec – Oficiální oznámení</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    :root {
-      --primary:#00897b;/* tyrkysově-zelená */
-      --danger:#c62828;/* červená pro zvýraznění */
-      --bg:#ffc0cb;/* růžové pozadí */
-      --txt:#000000;/* černý text */
-    }
-    *{
-      box-sizing:border-box;
-      margin:0; padding:0;
-    }
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--bg);
-      color:var(--txt);
-      line-height:1.6;
-      padding:20px;
-      max-width:760px;
-      margin:auto;
-    }
-    h1{
-      color:var(--primary);
-      font-size:2.2rem;
-      margin-bottom:10px;
-      text-align:center;
-    }
-    h2{
-      color:var(--primary);
-      margin-top:25px;
-      margin-bottom:8px;
-      font-size:1.4rem;
-    }
-    p,li{
-      margin-bottom:10px;
-      font-size:1rem;
-    }
-    ul{
-      list-style-type:disc;
-      padding-left:20px;
-    }
-    .btn{
-      display:inline-block;
-      background:var(--primary);
-      color:#fff;
-      padding:12px 22px;
-      border:none;
-      border-radius:6px;
-      text-decoration:none;
-      font-size:1rem;
-      margin-top:20px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-    .btn:hover{
-      background:#00695c;
-    }
-    .note{
-      font-style:italic;
-      font-size:0.9rem;
-      color:#333;
-    }
-    footer{
-      margin-top:40px;
-      text-align:center;
-      font-size:0.9rem;
-      color:#555;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Squid Game Třinec</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🔥 Squid Game&nbsp;Třinec – Oficiální oznámení</h1>
+  <h1>Squid Game Třinec</h1>
+  <p>Dní do začátku:</p>
+  <div id="countdown"></div>
 
-  <h2>📣 Zpráva komunity</h2>
-  <p>Jako <strong>oficiální člen komunity Squid Game&nbsp;Třinec</strong> vzkazuji:</p>
-  <ul>
-    <li>Vím, že už dlouho čekáte na <em>Squid Game&nbsp;Třinec</em> a musím uznat, že já jsem se taky těšil.</li>
-    <li>Dočkali jsme se! Akce <strong>Squid Game&nbsp;Třinec</strong> proběhne <strong>během 7.&nbsp;měsíce (červenec)</strong>!</li>
-  </ul>
+  <div id="event-info">
+    <h2>📍 První hra</h2>
+    <p>🗓️ Datum: <strong>24. 7. 2025</strong></p>
+    <p>📌 Místo: <strong>Školní hřiště ZŠ 5. Třinec</strong></p>
+  </div>
 
-  <h2>🗓 Termíny her</h2>
-  <p>Hry se budou konat <strong>každý den odpoledne</strong>. Pokud bude pršet, přesouváme je na následující den.</p>
-
-  <h2>👕 Dress-code</h2>
-  <p>Před hrou prosíme, abyste dorazili nejlépe v:</p>
-  <ul>
-    <li>bílém tričku,</li>
-    <li>zeleno-tyrkysové mikině,</li>
-    <li>kalhotách dle libosti.</li>
-  </ul>
-
-  <h2>🔢 Startovní čísla</h2>
-  <p>Čísla rozdáme <strong>první den</strong>; po skončení všech her si je ponecháte.</p>
-
-  <h2>🏆 Odměna pro vítěze</h2>
-  <p>Ten, kdo vyhraje, získá <strong>45&nbsp;žetonů</strong>. Ty může uplatnit v našem obchodě na různé věci ze světa <em>Squid Game</em>. 🎁</p>
-
-  <h2>❓ Jste připraveni?</h2>
-  <p><strong>Těšíte se na Squid Game&nbsp;Třinec?</strong></p>
-  <a class="btn" href="#" onclick="alert('Skvělé! Sleduj náš Instagram a doraz!'); return false;">Chci se zúčastnit!</a>
-
-  <p class="note">*Detaily (přesné datum, místo, pravidla) budou postupně zveřejňovány v našem chatu a na sociálních sítích.*</p>
-
-  <footer>
-    © 2025 Squid Game Třinec – Všechna práva vyhrazena
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
